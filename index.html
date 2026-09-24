@@ -38,6 +38,7 @@
       100% { box-shadow: 0 0 0 0 rgba(79, 70, 229, 0); }
     }
   </style>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased min-h-screen overflow-x-hidden">
 
@@ -610,6 +611,13 @@
       initCharts();
       setTimeout(triggerLivePopUp, 2000);
     });
+  </script>
+  <script>
+    const SUPABASE_URL = 'https://eyaelnppfgwgkkhkhajg.supabase.co/rest/v1/';
+    const SUPABASE_KEY = 'eyaelnppfgwgkkhkhajg';             
+    
+    const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+    console.log('Supabase berhasil terhubung!');
   </script>
 </body>
 </html>
